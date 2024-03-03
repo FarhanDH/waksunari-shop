@@ -1,0 +1,39 @@
+{
+  "name": "turbo-starter",
+  "private": true,
+  "scripts": {
+    "dev": "dotenv -- turbo dev --daemon",
+    "dev-api": "dotenv -- turbo dev --no-daemon --filter=api",
+    "dev-web": "dotenv -- turbo dev --no-daemon --filter=web",
+    "dev-web-electron": "dotenv -- turbo dev:electron --no-daemon --filter=web",
+    "dev-nuxt": "dotenv -- turbo dev --no-daemon --filter=web-nuxt",
+    "dev-mobile": "dotenv -- turbo dev --no-daemon --filter=mobile",
+    "build": "dotenv -- turbo build --no-daemon",
+    "build-api": "dotenv -- turbo build --no-daemon --filter=api",
+    "build-web": "dotenv -- turbo build --no-daemon --filter=web",
+    "build-web-electron": "dotenv -- turbo build:electron --no-daemon --filter=web",
+    "build-nuxt": "dotenv -- turbo build --no-daemon --filter=web-nuxt",
+    "build-mobile": "dotenv -- turbo build --no-daemon --filter=mobile",
+    "start": "dotenv -- turbo start --no-daemon",
+    "start-api": "dotenv -- turbo start --no-daemon --filter=api",
+    "start-web": "dotenv -- turbo start --no-daemon --filter=web",
+    "start-nuxt": "dotenv -- turbo start --no-daemon --filter=web-nuxt",
+    "mobile-android": "dotenv -- turbo android --no-daemon --filter=mobile",
+    "mobile-ios": "dotenv -- turbo ios --no-daemon --filter=mobile",
+    "test": "dotenv -- turbo test --no-daemon",
+    "lint": "turbo lint --no-daemon",
+    "clean": "turbo clean --no-daemon"
+  },
+  "packageManager": "pnpm@8.7.6",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@turbo/gen": "^1.12.4",
+    "cpx": "^1.5.0",
+    "dotenv-cli": "^7.2.1",
+    "rimraf": "^5.0.5",
+    "turbo": "latest"
+  }
+}
